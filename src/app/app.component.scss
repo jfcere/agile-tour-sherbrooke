@@ -1,0 +1,182 @@
+@import './../_variables.scss';
+
+header {
+  background: #000;
+  background: url(/assets/header-background.jpg);
+  background-size: cover;
+  background-position-x: 33%;
+  position: relative;
+  height: 554px;
+
+  @media (max-width: $small-screen) {
+    height: 300px;
+  }
+
+  @media (min-width: $small-screen) and (max-width: $medium-screen) {
+    height: 410px;
+  }
+
+  .header-title {
+    float: right;
+    margin-top: 200px;
+    max-width: 700px;
+    width: 100%;
+    z-index: 1;
+
+    @media (max-width: $small-screen) {
+      margin-top: 90px;
+      max-width: 450px;
+    }
+
+    @media (min-width: $small-screen) and (max-width: $medium-screen) {
+      margin-top: 150px;
+      max-width: 500px;
+    }
+  }
+
+  .header-footer {
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+main {
+  .keynote {
+    background: #efefef;
+
+    .keynote-header {
+      display: block;
+      position: relative;
+      margin: -80px auto 20px;
+      width: 100%;
+      max-width: 500px;
+
+      @media (max-width: $small-screen) {
+        margin-top: -40px;
+        max-width: 280px;
+      }
+
+      @media (min-width: $small-screen) and (max-width: $medium-screen) {
+        margin-top: -50px;
+        max-width: 360px;
+      }
+    }
+
+    .keynote-picture {
+      max-width: 270px;
+      width: 100%;
+
+      @media (max-width: $small-screen) {
+        max-width: 210px;
+      }
+    }
+
+    .keynote-title,
+    .keynote-subtitle,
+    .keynote-text {
+      @media (max-width: $medium-screen) {
+        text-align: center;
+      }
+    }
+
+    .keynote-footer {
+      margin-top: 40px;
+      width: 100%;
+    }
+  }
+
+  .summary {
+    background: #fff;
+    margin: 30px 0;
+
+    @media (max-width: $medium-screen) {
+      text-align: center;
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          padding: 2px 0;
+        }
+      }
+    }
+
+    h1 {
+      i {
+        font-size: 36px;
+        position: relative;
+        top: 6px;
+
+        &.icon-margin {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    .btn {
+      border-radius: 3px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      max-width: 360px;
+      width: 100%;
+    }
+
+    .table {
+      text-align: left;
+    }
+    
+    .summary-exclude {
+      text-indent: -0.6em;
+      padding-left: 0.6em;
+    }
+  }
+
+  .partners {
+    background: #294350;
+    color: #fff;
+    padding-bottom: 50px;
+
+    .partners-header {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .partners-title {
+      margin-bottom: 30px;
+    }
+
+    .partners-pyxis {
+      margin: 20px 0;
+      max-width: 450px;
+      width: 100%;
+    }
+
+    .partners-udes,
+    .partners-cgi,
+    .partners-sherweb {
+      margin: 20px 0;
+      max-height: 50px;
+      max-width: 300px;
+    }
+
+    .partners-acceo {
+      margin: 20px 0;
+      max-height: 40px;
+      max-width: 200px;
+    }
+
+    .partners-vds {
+      margin: 20px 0;
+      max-height: 60px;
+      max-width: 200px;
+    }
+  }
+
+  // to-delete
+  .partners-main {
+    width: 100%;
+  }
+}
