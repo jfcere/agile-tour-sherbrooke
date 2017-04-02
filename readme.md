@@ -1,1 +1,0 @@
-# Agile Tour Sherbrooke 2017
