@@ -194,6 +194,28 @@ main {
       }
     }
 
+    @media (max-width: $small-screen) {
+      // container scrollable
+      .table-container {
+        overflow-x: scroll;
+        padding-bottom: 12px;
+        margin-left: 82px;
+
+        table {
+          margin-left: -15px;
+        }
+
+        // first column fixed
+        td:first-child,
+        th:first-child {
+          position: absolute;
+          width: 75px;
+          left: 15px;
+        }
+      }
+    }
+
+
     table {
       border-collapse: separate;
       border-spacing: 8px;
