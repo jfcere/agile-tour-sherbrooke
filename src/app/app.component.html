@@ -40,60 +40,6 @@
   <!-- schedule -->
   <!--<div class="schedule">
     <div class="container">
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Salle Principal</th>
-            <th>Salle 2</th>
-            <th>Cafétéria</th>
-            <th>Salon VIP</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>9h00 à 10h30</td>
-            <td class="keynote" colspan="4">Keynote: Uncle Bob</td>
-          </tr>
-          <tr>
-            <td>10h30 à 10h45</td>
-            <td colspan="4">Pause</td>
-          </tr>
-          <tr>
-            <td>10h45 à 12h00</td>
-            <td>Conférence 1</td>
-            <td>Conférence 2</td>
-            <td>Conférence 3</td>
-            <td>Conférence 4</td>
-          </tr>
-          <tr>
-            <td>12h00 à 13h00</td>
-            <td colspan="4">Dîner</td>
-          </tr>
-          <tr>
-            <td>13h00 à 14h15</td>
-            <td>Conférence 5</td>
-            <td>Conférence 6</td>
-            <td>Conférence 7</td>
-            <td>Conférence 8</td>
-          </tr>
-          <tr>
-            <td>14h15 à 14h30</td>
-            <td colspan="4">Pause</td>
-          </tr>
-          <tr>
-            <td>14h30 à 15h45</td>
-            <td>Conférence 9</td>
-            <td>Conférence 10</td>
-            <td>Conférence 11</td>
-            <td>Conférence 12</td>
-          </tr>
-          <tr>
-            <td>15h45 à 16h00</td>
-            <td class="closure" colspan="4">Mot de la fin</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </div>-->
 
@@ -117,16 +63,19 @@
             <h1 class="title text-accent">
               <i class="material-icons icon-margin">schedule</i>Horaire des conférences
             </h1>
-            <h3 class="text-primary bolder uppercase">À Confirmer</h3>
             <p>
-              Le programme complet de la journée sera dévoilé sous peu mais soyez assuré que vous aurez l'opportunité de participer à:
+              Le programme de la journée vous offre l'opportunité de participer à:
             </p>
             <ul>
               <li>1 présentation principale de 90 minutes (Robert Martin)</li>
-              <li>3 ateliers de 60 à 75 minutes, parmi un choix de 12 conférences et ateliers au programme</li>
+              <li>3 conférences de 60 à 75 minutes, parmi un choix de 12 conférences et ateliers au programme</li>
             </ul>
             <p>
               Que vous découvriez l'agilité ou que vous soyez expérimenté, vous aurez l'occasion d’y parfaire vos connaissances.
+            </p>
+
+            <p class="comeback-later bold">
+              * Le résumé des conférences ainsi que la biographie des conférencier(ière)s seront disponible sous peu
             </p>
 
             <div #tableContainer>
@@ -134,16 +83,20 @@
                 <thead>
                   <tr>
                     <th></th>
-                    <th>Salle Principal</th>
-                    <th>Salle 2</th>
-                    <th>Cafétéria</th>
-                    <th>Salon VIP</th>
+                    <th>Retours d'expérience techniques<hr>Salle Principale</th>
+                    <th>Conférences techniques<hr>Salle 2</th>
+                    <th>Conférences techniques<hr>Cafétéria</th>
+                    <th>Conférences agiles<hr>Salon VIP</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>9h00 à 10h30</td>
-                    <td class="keynote" colspan="4">Keynote: Uncle Bob</td>
+                    <td class="keynote" colspan="4">
+                      <div class="title">Clean Code</div>
+                      <div class="presenter">Uncle Bob Martin</div>
+                      <div class="company">Keynote</div>
+                    </td>
                   </tr>
                   <tr>
                     <td>10h30 à 10h45</td>
@@ -151,10 +104,11 @@
                   </tr>
                   <tr>
                     <td>10h45 à 12h00</td>
-                    <td>Conférence 1</td>
-                    <td>Conférence 2</td>
-                    <td>Conférence 3</td>
-                    <td>Conférence 4</td>
+                    <td *ngFor="let conference of conferenceAm1">
+                      <div class="title">{{ conference.title }}</div>
+                      <div class="presenter">{{ conference.presenter }}</div>
+                      <div class="company">{{ conference.company }}</div>
+                    </td>
                   </tr>
                   <tr>
                     <td>12h00 à 13h00</td>
@@ -162,10 +116,11 @@
                   </tr>
                   <tr>
                     <td>13h00 à 14h15</td>
-                    <td>Conférence 5</td>
-                    <td>Conférence 6</td>
-                    <td>Conférence 7</td>
-                    <td>Conférence 8</td>
+                    <td *ngFor="let conference of conferencePm1">
+                      <div class="title">{{ conference.title }}</div>
+                      <div class="presenter">{{ conference.presenter }}</div>
+                      <div class="company">{{ conference.company }}</div>
+                    </td>
                   </tr>
                   <tr>
                     <td>14h15 à 14h30</td>
@@ -173,10 +128,11 @@
                   </tr>
                   <tr>
                     <td>14h30 à 15h45</td>
-                    <td>Conférence 9</td>
-                    <td>Conférence 10</td>
-                    <td>Conférence 11</td>
-                    <td>Conférence 12</td>
+                    <td *ngFor="let conference of conferencePm2">
+                      <div class="title">{{ conference.title }}</div>
+                      <div class="presenter">{{ conference.presenter }}</div>
+                      <div class="company">{{ conference.company }}</div>
+                    </td>
                   </tr>
                   <tr>
                     <td>15h45 à 16h00</td>

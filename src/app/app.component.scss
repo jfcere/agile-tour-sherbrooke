@@ -242,12 +242,38 @@ main {
         font-weight: bold;
       }
 
+      th {
+        hr {
+          border-top: 2px solid #fff;
+          margin: 8px -8px;
+        }
+      }
+
       td:not(:first-child) {
         background: rgba(0,0,0,0.07);
+        width: 21%;
       }
 
       td[colspan]:not(.keynote):not(.closure) {
         background: rgba(41, 67, 80, 0.16);
+      }
+
+      td {
+        color: #294350;
+
+        .title {
+          font-weight: bold;
+          font-size: 14.5px;
+        }
+
+        .presenter {
+          font-size: 13px;
+        }
+
+        .company {
+          font-size: 11px;
+          opacity: 0.69;
+        }
       }
     }
 
