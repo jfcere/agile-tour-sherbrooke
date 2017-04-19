@@ -31,7 +31,7 @@ export class AppComponent implements AfterViewInit {
       company: 'Pyxis',
     },
     {
-      title: 'Le Management 3.0: Des processus qui marche',
+      title: 'Le Management 3.0: Des processus qui marchent',
       presenter: 'Nathalie Ferron et Magali Doucet',
       company: 'Levio',
     },
