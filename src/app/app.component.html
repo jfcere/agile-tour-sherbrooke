@@ -103,10 +103,10 @@
                     <td colspan="4">Pause</td>
                   </tr>
                   <tr>
-                    <td>10h45 à 12h00</td>
-                    <td *ngFor="let conference of conferenceAm1">
+                    <td>{{ timeAM1 }}</td>
+                    <td class="clickable" *ngFor="let conference of conferenceAm1" (click)="openModal(conference)">
                       <div class="title">{{ conference.title }}</div>
-                      <div class="presenter">{{ conference.presenter }}</div>
+                      <div class="presenter">{{ concatPresenters(conference.presenters) }}</div>
                       <div class="company">{{ conference.company }}</div>
                     </td>
                   </tr>
@@ -115,8 +115,8 @@
                     <td colspan="4">Dîner</td>
                   </tr>
                   <tr>
-                    <td>13h00 à 14h15</td>
-                    <td *ngFor="let conference of conferencePm1">
+                    <td>{{ timePM1 }}</td>
+                    <td class="clickable" *ngFor="let conference of conferencePm1">
                       <div class="title">{{ conference.title }}</div>
                       <div class="presenter">{{ conference.presenter }}</div>
                       <div class="company">{{ conference.company }}</div>
@@ -127,8 +127,8 @@
                     <td colspan="4">Pause</td>
                   </tr>
                   <tr>
-                    <td>14h30 à 15h45</td>
-                    <td *ngFor="let conference of conferencePm2">
+                    <td>{{ timePM2 }}</td>
+                    <td class="clickable" *ngFor="let conference of conferencePm2">
                       <div class="title">{{ conference.title }}</div>
                       <div class="presenter">{{ conference.presenter }}</div>
                       <div class="company">{{ conference.company }}</div>
