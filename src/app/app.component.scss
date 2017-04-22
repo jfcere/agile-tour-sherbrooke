@@ -390,10 +390,10 @@ main {
     }
 
     @media (max-width: $small-screen) {
-      max-width: 100px;
+      max-width: 120px;
 
       & + .conference-picture {
-        margin-left: -35px;
+        margin-left: -30px;
       }
     }
   }

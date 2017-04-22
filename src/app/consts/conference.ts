@@ -186,12 +186,7 @@ export const ConferencePm2: Conference[] = [
         name: `Eric Lessard`,
         picture: `assets/eric-lessard.png`,
         bio: `Éric Lessard est un coach et praticien agile depuis plus de 10 ans. Il a occupé un éventail de rôles différents dans les équipes agiles comme développeur, analyste, chef d’équipe, coordonnateur et coach.<br>Il préconise une approche pragmatique et concrète à l’agilité, visant la livraison de résultats par des équipes humaines et engagées.`,
-      },
-      {
-        name: `Patrick Bocquet`,
-        picture: `assets/patrick-bocquet.png`,
-        bio: `Je suis un Comptable Professionnel Agréé (CPA-CMA) mais j’ai toujours travaillé dans le domaine des technologies de l’information, en tant que gestionnaire ou gestionnaire de projet. Je suis Project Management Professional (PMP, pmi.org). J’avoue avoir un enthousiasme hors du commun envers l'Agilité depuis que j’ai été introduit plus particulièrement à Scrum au milieu des années 2000. Depuis ce temps, j’ai étendu mes connaissances et formalisé mon expérience à ce sujet. J’ai concrétisé une certification Certified Scrum Master (CSM, ScrumAlliance) et certification Professional Scrum Master I (PSM I, scrum.org)..`,
-      },
+      }
     ],
   },
   {
