@@ -373,16 +373,32 @@ main {
   }
 
   .conference-picture {
-    max-width: 270px;
+    max-width: 225px;
     width: 100%;
 
+    & + .conference-picture {
+      margin-left: -50px;
+    }
+
+    @media (max-width: $medium-screen) {
+      max-width: 180px;
+
+      & + .conference-picture {
+        margin-left: -40px;
+      }
+    }
+
     @media (max-width: $small-screen) {
-      max-width: 210px;
+      max-width: 100px;
+
+      & + .conference-picture {
+        margin-left: -35px;
+      }
     }
   }
 
   .conference-title,
-  .conference-subtitle,
+  .conference-presenter,
   .conference-location,
   .conference-bio,
   .conference-resume,
@@ -392,10 +408,8 @@ main {
     }
   }
 
-  .conference-location {
-    padding-bottom: 10px;
-  }
-
+  .conference-presenter,
+  .conference-location,
   .conference-text {
     padding-bottom: 10px;
   }
