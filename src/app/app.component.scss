@@ -261,6 +261,18 @@ main {
       td {
         color: #294350;
 
+        &.clickable {
+          transition: all 0.25s ease-in;
+      
+          &:hover {
+            background: rgb(41, 67, 80) !important;
+            color: white !important;
+            cursor: pointer;
+            position: relative;
+            transform: scale(1.025);
+          }
+        }
+
         .title {
           font-weight: bold;
           font-size: 14.5px;
@@ -343,9 +355,73 @@ main {
       max-width: 200px;
     }
   }
+}
 
-  // to-delete
-  .partners-main {
+/* angular2-modal customization */
+
+#{'/deep/'} {
+  .modal-header,
+  .modal-footer {
+    border: 0;
+  }
+
+  .modal-header {
+    padding-bottom: 0;
+  }
+
+  .modal-footer {
+    padding-top: 0;
+  }
+
+  .conference-picture {
+    max-width: 225px;
     width: 100%;
+
+    & + .conference-picture {
+      margin-left: -50px;
+    }
+
+    @media (max-width: $medium-screen) {
+      max-width: 180px;
+
+      & + .conference-picture {
+        margin-left: -40px;
+      }
+    }
+
+    @media (max-width: $small-screen) {
+      max-width: 100px;
+
+      & + .conference-picture {
+        margin-left: -35px;
+      }
+    }
+  }
+
+  .conference-title,
+  .conference-presenter,
+  .conference-location,
+  .conference-bio,
+  .conference-resume,
+  .conference-text {
+    @media (max-width: $medium-screen) {
+      text-align: center;
+    }
+  }
+
+  .conference-presenter,
+  .conference-location,
+  .conference-text {
+    padding-bottom: 10px;
+  }
+
+  .btn-modal-close {
+    background: rgba(44, 66, 81, 0.74);
+    color: #fff;
+
+    &:hover {
+      background: rgb(44, 66, 81);
+      color: #fff;
+    }
   }
 }

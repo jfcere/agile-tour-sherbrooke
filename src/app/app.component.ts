@@ -1,9 +1,16 @@
-import { AfterViewInit, Component, ElementRef, Renderer, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Renderer, ViewChild, ViewContainerRef } from '@angular/core';
+import { Overlay } from 'angular2-modal';
+import { Modal } from 'angular2-modal/plugins/bootstrap';
+
+import { ConferenceAm1, ConferencePm1, ConferencePm2 } from './consts/conference';
+import { Conference, Presenter } from './models';
 
 interface IConference {
   title: string,
   presenter: string,
   company: string,
+  picture?: string,
+  resume?: string,
 }
 
 @Component({
@@ -14,76 +21,22 @@ interface IConference {
 export class AppComponent implements AfterViewInit {
   @ViewChild('tableContainer') tableContainer: ElementRef
 
-  conferenceAm1: IConference[] = [
-    {
-      title: 'Faire Agile vs être Agile',
-      presenter: 'Olivier Fortier',
-      company: 'FX Innovation',
-    },
-    {
-      title: '"Scaling Agile" dans un contexte manufacurier',
-      presenter: 'Benoit Lapointe',
-      company: 'IBM',
-    },
-    {
-      title: 'Top 5 des meilleures façons d\'améliorer votre code',
-      presenter: 'Éric De Carufel',
-      company: 'Pyxis',
-    },
-    {
-      title: 'Le Management 3.0: Des processus qui marchent',
-      presenter: 'Nathalie Ferron et Magali Doucet',
-      company: 'Levio',
-    },
-  ];
+  conferenceAm1: Conference[];
+  conferencePm1: Conference[];
+  conferencePm2: Conference[];
 
-  conferencePm1: IConference[] = [
-    {
-      title: 'Gérer l\'inconnu avec peu de moyens par le développement itératif - L\'Agilité chez PMCtire.com',
-      presenter: 'Benoit St-André & Frédéric Gauthier-Boutin',
-      company: 'PMCtire',
-    },
-    {
-      title: 'CGI Sherbrooke: transformation agile en cours',
-      presenter: 'Sedera Randria',
-      company: 'CGI',
-    },
-    {
-      title: 'La valeur: édition du développeur',
-      presenter: 'Luc St-Laurent',
-      company: 'Pyxis',
-    },
-    {
-      title: 'En route vers l\'optimisation! Votre succès avec Kanban étape par étape',
-      presenter: 'Valéry Germain & Nicolas Mercier',
-      company: 'Facilité',
-    },
-  ];
-
-  conferencePm2: IConference[] = [
-    {
-      title: 'CI: Intégration continue, de la théorie à la pratique',
-      presenter: 'Gabriel Blais-Bourget',
-      company: 'Sherweb',
-    },
-    {
-      title: 'Revoir le travail du gestionnaire du passé au présent',
-      presenter: 'Daniel Prince',
-      company: 'Revenu Québec',
-    },
-    {
-      title: 'Architecture express pour petits projets',
-      presenter: 'Frédéric Paquet & Eric Lessard',
-      company: 'Facilité',
-    },
-    {
-      title: 'A déterminer',
-      presenter: '',
-      company: '',
-    },
-  ];
-
-  constructor(private renderer: Renderer) { }
+  constructor(
+    overlay: Overlay,
+    viewContainerRef: ViewContainerRef,
+    private modal: Modal,
+    private renderer: Renderer,
+  ) {
+    overlay.defaultViewContainer = viewContainerRef;
+    
+    this.conferenceAm1 = ConferenceAm1;
+    this.conferencePm1 = ConferencePm1;
+    this.conferencePm2 = ConferencePm2;
+  }
 
   ngAfterViewInit() {
     // ugly fix for mobile as fixed column in table was not correctly positioned
@@ -91,5 +44,40 @@ export class AppComponent implements AfterViewInit {
     setTimeout(() => {
       this.renderer.setElementClass(this.tableContainer.nativeElement, 'table-container', true);
     }, 1000);
+  }
+
+  openModal(conference: Conference) {
+    this.modal.alert()
+      .size('lg')
+      .showClose(true)
+      .okBtn('Fermer')
+      .okBtnClass('btn btn-modal-close uppercase')
+      .body(`
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h1 class="conference-title text-accent uppercase">${conference.title}</h1>
+            <h4 class="conference-location text-secondary uppercase bold">${conference.time} - ${conference.room}</h4>
+            <div class="col-sm-12 text-center">` +
+              conference.presenters.reduce((pictures, presenter) => {
+                return pictures.concat(`<img class="conference-picture" src="${presenter.picture}">`);
+              }, '') + `
+            </div>
+            <h3 class="conference-presenter text-primary">${this.concatPresenters(conference.presenters)}</h3>
+            <h4 class="conference-resume text-primary bold">Résumé de la conférence</h4>
+            <p class="conference-text">${conference.resume}</p>` +
+            conference.presenters.reduce((bio, presenter) => {
+              return bio.concat(`
+                <h4 class="conference-bio text-primary bold">
+                  Biographie - ${presenter.name}
+                </h4>
+                <p class="conference-text">${presenter.bio}</p>`);
+            }, '') + `
+          </div>
+        </div>`)
+      .open();
+  }
+
+  concatPresenters(presenters: Presenter[]): string {
+    return presenters.map(x => x.name).join(' et ');
   }
 }
