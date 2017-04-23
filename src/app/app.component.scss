@@ -360,6 +360,10 @@ main {
 /* angular2-modal customization */
 
 #{'/deep/'} {
+  $lg-picture-max-width: 225px;
+  $md-picture-max-width: 180px;
+  $sm-picture-max-width: 120px;
+
   .modal-header,
   .modal-footer {
     border: 0;
@@ -369,12 +373,78 @@ main {
     padding-bottom: 0;
   }
 
+  .modal-body {
+    padding: 0;
+  }
+
   .modal-footer {
     padding-top: 0;
   }
 
+  .modal-header,
+  .conference-header {
+    background-color: #efefef;
+  }
+
+  .conference-header {
+    background-image: url(../assets/keynote-footer.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    margin-bottom: $lg-picture-max-width/2;
+    padding-bottom: calc(#{$lg-picture-max-width/2} + 30px) !important;
+
+    @media (max-width: $medium-screen) {
+      background-position: bottom center;
+      margin-bottom: $md-picture-max-width/2;
+      padding-bottom: calc(#{$md-picture-max-width/2} + 30px) !important;
+    }
+
+    @media (max-width: $small-screen) {
+      background-position: bottom center;
+      margin-bottom: $sm-picture-max-width/2;
+      padding-bottom: calc(#{$sm-picture-max-width/2} + 30px) !important;
+    }
+  }
+
+  .conference-content {
+    margin-top: -30px;
+  }
+
+  .conference-header,
+  .conference-content {
+    padding: 15px 50px;
+
+    @media (max-width: $medium-screen) {
+      padding: 15px 30px;
+    }
+
+    @media (max-width: $small-screen) {
+      padding: 15px;
+    }
+  }
+
+  .conference-title {
+    font-size: 32px;
+    margin-top: 0;
+
+    @media (max-width: $medium-screen) {
+      font-size: 28px;
+    }
+
+    @media (max-width: $small-screen) {
+      font-size: 24px;
+    }
+  }
+
+  .conference-picture-container {
+    position: absolute;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+
   .conference-picture {
-    max-width: 225px;
+    max-width: $lg-picture-max-width;
     width: 100%;
 
     & + .conference-picture {
@@ -382,7 +452,7 @@ main {
     }
 
     @media (max-width: $medium-screen) {
-      max-width: 180px;
+      max-width: $md-picture-max-width;
 
       & + .conference-picture {
         margin-left: -40px;
@@ -390,11 +460,24 @@ main {
     }
 
     @media (max-width: $small-screen) {
-      max-width: 120px;
+      max-width: $sm-picture-max-width;
 
       & + .conference-picture {
         margin-left: -30px;
       }
+    }
+  }
+
+  .conference-presenter {
+    font-size: 24px;
+    margin-top: 0;
+
+    @media (max-width: $medium-screen) {
+      font-size: 21px;
+    }
+
+    @media (max-width: $small-screen) {
+      font-size: 20px;
     }
   }
 
@@ -411,8 +494,8 @@ main {
 
   .conference-presenter,
   .conference-location,
-  .conference-text {
-    padding-bottom: 10px;
+  .conference-text:not(:last-child) {
+    padding-bottom: 20px;
   }
 
   .btn-modal-close {

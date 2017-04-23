@@ -52,27 +52,28 @@ export class AppComponent implements AfterViewInit {
       .showClose(true)
       .okBtn('Fermer')
       .okBtnClass('btn btn-modal-close uppercase')
+        // <div class="background"></div>
       .body(`
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <h1 class="conference-title text-accent uppercase">${conference.title}</h1>
-            <h4 class="conference-location text-secondary uppercase bold">${conference.time} - ${conference.room}</h4>
-            <div class="col-sm-12 text-center">` +
-              conference.presenters.reduce((pictures, presenter) => {
-                return pictures.concat(`<img class="conference-picture" src="${presenter.picture}">`);
-              }, '') + `
-            </div>
-            <h3 class="conference-presenter text-primary">${this.concatPresenters(conference.presenters)}</h3>
-            <h4 class="conference-resume text-primary bold">Résumé de la conférence</h4>
-            <p class="conference-text">${conference.resume}</p>` +
-            conference.presenters.reduce((bio, presenter) => {
-              return bio.concat(`
-                <h4 class="conference-bio text-primary bold">
-                  Biographie - ${presenter.name}
-                </h4>
-                <p class="conference-text">${presenter.bio}</p>`);
+        <div class="conference-header text-center">
+          <h1 class="conference-title text-accent uppercase">${conference.title}</h1>
+          <h4 class="conference-location text-secondary uppercase bold">${conference.time} - ${conference.room}</h4>
+          <div class="conference-picture-container text-center">` +
+            conference.presenters.reduce((pictures, presenter) => {
+              return pictures.concat(`<img class="conference-picture" src="${presenter.picture}">`);
             }, '') + `
           </div>
+        </div>
+        <div class="conference-content text-center">
+          <h3 class="conference-presenter text-primary">${this.concatPresenters(conference.presenters)}</h3>
+          <h4 class="conference-resume text-primary bold">Résumé de la conférence</h4>
+          <p class="conference-text">${conference.resume}</p>` +
+          conference.presenters.reduce((bio, presenter) => {
+            return bio.concat(`
+              <h4 class="conference-bio text-primary bold">
+                Biographie - ${presenter.name}
+              </h4>
+              <p class="conference-text">${presenter.bio}</p>`);
+          }, '') + `
         </div>`)
       .open();
   }
