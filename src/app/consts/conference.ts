@@ -190,17 +190,21 @@ export const ConferencePm2: Conference[] = [
     ],
   },
   {
-    // A DETERMINER...
     time: Time.timePM2,
     room: Room.room4,
-    title: `Conférence à déterminer`,
-    resume: `A venir...`,
-    company: ``,
+    title: `Comprendre le niveau de maturité de votre organisation OU avoir des attentes réalistes pour votre implantation Agile.`,
+    resume: `De plus en plus d’entreprises veulent maintenant se transformer vers l’Agilité. On se questionnera sur ce que ça prend pour amorcer une transition en grande entreprise. On discutera des différents niveaux de maturité possible d’une entreprise qui initie une transformation. Nous nous questionnerons sur les attentes réalistes d’une transformation Agile en fonction du niveau de maturité des entreprises.`,
+    company: `Agile Partnership`,
     presenters: [
       {
-        name: `Présentateur à confirmer`,
-        picture: `assets/picture-not-available.png`,
-        bio: `A venir...`,
+        name: `Stéphane Lecuyer`,
+        picture: `assets/picture-not-available.png`, // stephane-lecuyer.png`,
+        bio: `Stéphane a coaché plusieurs équipes à travers des transformations organisationnelles Agile depuis plus de 10 ans. Il est un fin observateur de l’humain, des équipes et des comportements organisationnels. Il a coaché avec succès plusieurs équipes dans une variété d’environnements difficiles en mettant l’accent sur le côté humain des transformations Agile.<br><br>Formateur Scrum et coach expérimenté, il utilise la théorie et la pratique, appuyé par d’excellentes compétences de mentorat, pour soutenir efficacement les équipes et les cadres supérieurs. Stéphane est un Scrum master certifié ainsi qu’un praticien Scrum. Depuis 10 ans maintenant, il a formé plus de 350 Scrum Master / Product Owner`,
+      },
+      {
+        name: `Louis Morisset`,
+        picture: `assets/louis-morisset.png`,
+        bio: `Louis Morisset est un Coach Agile qui travaille dans le domaine des technologies de l’information depuis 1998. Rapidement, Louis a réalisé qu’il existait un écart entre les résultats de l’implantation de l’Agilité au niveau des équipes de livraison et les attentes des groupes de gestionnaires. Ceci l’a amené à se spécialiser en coaching Agile pour les gestionnaires de haut niveau. Étant certifié de la ‘Agile Coaching Institute’ comme Agile Coach Expert, il possède une expérience importante dans l’accompagnement de grandes entreprise dans l’adoption de l’agilité.`,
       },
     ],
   },

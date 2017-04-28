@@ -118,7 +118,7 @@
                     <td>{{ conferencePm1[0].time }}</td>
                     <td class="clickable" *ngFor="let conference of conferencePm1" (click)="openModal(conference)">
                       <div class="title">{{ conference.title }}</div>
-                      <div class="presenter">{{ conference.presenter }}</div>
+                      <div class="presenter">{{ concatPresenters(conference.presenters) }}</div>
                       <div class="company">{{ conference.company }}</div>
                     </td>
                   </tr>
@@ -130,7 +130,7 @@
                     <td>{{ conferencePm2[0].time }}</td>
                     <td class="clickable" *ngFor="let conference of conferencePm2" (click)="openModal(conference)">
                       <div class="title">{{ conference.title }}</div>
-                      <div class="presenter">{{ conference.presenter }}</div>
+                      <div class="presenter">{{ concatPresenters(conference.presenters) }}</div>
                       <div class="company">{{ conference.company }}</div>
                     </td>
                   </tr>
