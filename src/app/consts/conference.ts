@@ -105,7 +105,6 @@ export const ConferencePm1: Conference[] = [
     ],
   },
   {
-    // BIO MANQUANTE...
     time: Time.timePM1,
     room: Room.room3,
     title: `La valeur: édition du développeur`,
@@ -115,7 +114,7 @@ export const ConferencePm1: Conference[] = [
       {
         name: `Luc St-Laurent`,
         picture: `assets/luc-st-laurent.png`,
-        bio: `A venir...`,
+        bio: `Luc est un professionnel certifié Scrum (CSP) et un coach Agile chez Pyxis. Il a commencé son trajet dans les technologies il y a plus de 20 ans, bien avant d’adopter les valeurs Agiles en 2007 comme Product Owner. Il se dévoue maintenant à aider les équipes et les gestionnaires à mieux collaborer afin de livrer un meilleur produit entre les mains de l’utilisateur.`,
       },
     ],
   },
