@@ -198,7 +198,6 @@ main {
       // container scrollable
       .table-container {
         overflow-x: scroll;
-        padding-bottom: 12px;
         margin-left: 82px;
 
         table {
@@ -262,6 +261,7 @@ main {
         color: #294350;
 
         &.clickable {
+          height: 220px;
           transition: all 0.25s ease-in;
       
           &:hover {
