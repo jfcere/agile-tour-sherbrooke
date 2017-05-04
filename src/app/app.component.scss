@@ -327,6 +327,16 @@ main {
       margin-bottom: 30px;
     }
 
+    .partner-divider {
+      border-top: 1px solid rgba(255, 255, 255, 0.21);
+      border-bottom: 1px solid rgba(0,0,0,0.14);
+      width: 60%;
+
+      @media (max-width: $medium-screen) {
+        width: 80%;
+      }
+    }
+
     .partners-pyxis,
     .partners-genetec,
     .partners-innopole {
@@ -335,24 +345,24 @@ main {
       width: 100%;
     }
 
-    .partners-udes,
-    .partners-cgi,
-    .partners-sherweb {
+    .partners-acceo,
+    .partners-facilite {
       margin: 20px 0;
-      max-height: 50px;
-      max-width: 300px;
+      max-width: 250px;
+
+      @media (max-width: $small-screen) {
+        width: 60%;
+      }
     }
 
-    .partners-acceo {
-      margin: 20px 0;
-      max-height: 40px;
-      max-width: 200px;
-    }
+    @media (min-width: $medium-screen) {
+      .partners-acceo {
+        float: right;
+      }
 
-    .partners-vds {
-      margin: 20px 0;
-      max-height: 60px;
-      max-width: 200px;
+      .partners-facilite {
+        float: left;
+      }
     }
   }
 }
