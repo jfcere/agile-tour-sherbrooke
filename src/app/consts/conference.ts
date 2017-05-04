@@ -141,7 +141,6 @@ export const ConferencePm1: Conference[] = [
 
 export const ConferencePm2: Conference[] = [
   {
-    // RESUME CONFERENCE A REVOIR...
     time: Time.timePM2,
     room: Room.room1,
     title: `CI: Intégration continue, de la théorie à la pratique`,
@@ -197,7 +196,7 @@ export const ConferencePm2: Conference[] = [
     presenters: [
       {
         name: `Stéphane Lecuyer`,
-        picture: `assets/picture-not-available.png`, // stephane-lecuyer.png`,
+        picture: `assets/stephane-lecuyer.png`,
         bio: `Stéphane a coaché plusieurs équipes à travers des transformations organisationnelles Agile depuis plus de 10 ans. Il est un fin observateur de l’humain, des équipes et des comportements organisationnels. Il a coaché avec succès plusieurs équipes dans une variété d’environnements difficiles en mettant l’accent sur le côté humain des transformations Agile.<br><br>Formateur Scrum et coach expérimenté, il utilise la théorie et la pratique, appuyé par d’excellentes compétences de mentorat, pour soutenir efficacement les équipes et les cadres supérieurs. Stéphane est un Scrum master certifié ainsi qu’un praticien Scrum. Depuis 10 ans maintenant, il a formé plus de 350 Scrum Master / Product Owner`,
       },
       {
