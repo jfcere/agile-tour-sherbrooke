@@ -159,12 +159,12 @@ export const ConferencePm2: Conference[] = [
     room: Room.room2,
     title: `Gestionnaire : une profession en mutation`,
     resume: `Le travail de gestionnaire a constamment changé, et ce, dès le début de l’ère industrielle. Pourtant, au cours des dernières années, le changement s’est fait plus rapide et plus drastique au point où le fameux PODC (planifier, organiser, diriger, contrôler) est maintenant chose du passé. On parle maintenant de savoir-être, de compétence relationnelle, d’équipe auto-organisée…<br><br>C’est l’émergence d’une nouvelle « espèce » de gestionnaire. Que s’est-il passé pour qu’on en arrive là? Est-ce le fruit d’une évolution darwinienne? S’agit-il d’une mode passagère ou d’une tendance lourde qui n’a pas fini d’évoluer? Cette conférence propose une vision de ce qui a amené les organisations à revoir le travail du gestionnaire du passé au présent nous survolerons un ensemble d’évènements qui ont changé radicalement l’environnement des organisations et nous tenterons de relever des indices nous révélant certaines surprises que semble nous réserver l’avenir.`,
-    company: `Revenu Québec`,
+    company: `Conseiller à la fonction publique`,
     presenters: [
       {
         name: `Daniel Prince`,
         picture: `assets/daniel-prince.png`,
-        bio: `Daniel Prince, CRHA est psychosociologue et détient une maîtrise en administration publique avec une majeure en gestion des ressources humaines. Il a travaillé pour plusieurs grandes organisations tant dans le domaine publique que privé, principalement en accompagnement de gestionnaires, en développement organisationnel et en développement du leadership ainsi qu’en gestion du changement. Il a notamment contribué au succès des implantations de systèmes RH tels qu’Oracle et SAP. Il est présentement à l’emploi de Revenu Québec à la Direction principale des services technologiques en tant que Conseiller en changement (transformation) organisationnel.`,
+        bio: `Daniel Prince, CRHA est psychosociologue et détient une maîtrise en administration publique avec une majeure en gestion des ressources humaines. Il a travaillé pour plusieurs grandes organisations tant dans le domaine publique que privé, principalement en accompagnement de gestionnaires, en développement organisationnel et en développement du leadership ainsi qu’en gestion du changement. Il a notamment contribué au succès des implantations de systèmes RH tels qu’Oracle et SAP. Il est présentement à l’emploi d'une direction principale des services technologiques de la fonction publique en tant que Conseiller en changement (transformation) organisationnel`,
       },
     ],
   },
