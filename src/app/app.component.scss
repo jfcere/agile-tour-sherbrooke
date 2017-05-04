@@ -346,12 +346,21 @@ main {
     }
 
     .partners-acceo,
-    .partners-facilite {
+    .partners-facilite, {
       margin: 20px 0;
       max-width: 250px;
 
       @media (max-width: $small-screen) {
         width: 60%;
+      }
+    }
+
+    .partners-wolters-kluwer {
+      margin: 20px 0;
+      max-height: 70px;
+
+      @media (max-width: $small-screen) {
+        width: 75%;
       }
     }
 
