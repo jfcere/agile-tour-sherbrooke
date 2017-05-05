@@ -1,6 +1,28 @@
 import { Room, Time  } from '../consts';
 import { Conference } from '../models';
 
+export const ConferenceKeynote: Conference = {
+  time: Time.timeKeynote,
+  room: Room.room1,
+  title: `Agility and Architecture`,
+  resume: `Do agile methods abandon architecture for speed? Do they replace good design decisions with mindless testing? Are agile methods just another way to hack-and-slash systems together without the appropriate discipline, due-diligence, and documentation? In this Keynote Robert C. Martin describes how the principles of Agile Software Development lead to rich and robust architectures, high degrees of discipline, due consideration of design and architecture, and all appropriate levels of documentation.`,
+  company: `Keynote`,
+  presenters: [
+    {
+      name: `Uncle Bob Martin`,
+      picture: `assets/uncle-bob.png`,
+      bio: `<b>Robert C. Martin</b>, aka "Uncle Bob," has been a software professional since 1970 and an international software consultant since 1990. In the last 40 years, he has worked in various capacities on literally hundreds of software projects. In 2001, he initiated the meeting of the group that created Agile Software Development from Extreme Programming techniques and served as the first chairman of the Agile Alliance.  He is also a leading member of the Worldwide Software Craftsmanship Movement - Clean Code.<br>
+            <br>
+            He has authored "landmark" books on Agile Programming, Extreme Programming, UML, Object-Oriented Programming,  C++ Programming and most recently Clean Code and Clean Coder. He has published dozens of articles in various trade journals.<br>
+            He has written, directed and produced numerous "Code Casts" videos for software professionals.<br>
+            Bob is a regular speaker at international conferences and trade shows.<br>
+            Mr. Martin is the founder, CEO, and president of Uncle Bob Consulting, LLC and Object Mentor Incorporated.<br>
+            <br>
+            Uncle Bob has published dozens of articles in various trade journals, and is a regular speaker at international conferences and trade shows.​​`,
+    },
+  ],
+};
+
 export const ConferenceAm1: Conference[] = [
   {
     time: Time.timeAM1,

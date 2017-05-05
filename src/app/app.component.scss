@@ -260,7 +260,20 @@ main {
       td {
         color: #294350;
 
-        &.clickable {
+        &.keynote.clickable {
+          height: 110px;
+          transition: all 0.25s ease-in;
+          
+          &:hover {
+            background: rgb(41, 67, 80) !important;
+            color: white !important;
+            cursor: pointer;
+            position: relative;
+            transform: scale(1.0125);
+          }
+        }
+
+        &.clickable:not(.keynote) {
           height: 220px;
           transition: all 0.25s ease-in;
       

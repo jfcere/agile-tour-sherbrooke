@@ -91,9 +91,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>9h00 à 10h30</td>
-                    <td class="keynote" colspan="4">
-                      <div class="title">Clean Code</div>
+                    <td>{{ conferenceKeynote.time }}</td>
+                    <td class="keynote clickable" colspan="4" (click)="openModal(conferenceKeynote)">
+                      <div class="title">Agility and Architecture</div>
                       <div class="presenter">Uncle Bob Martin</div>
                       <div class="company">Keynote</div>
                     </td>

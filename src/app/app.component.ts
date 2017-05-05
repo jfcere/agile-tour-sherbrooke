@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, Renderer, ViewChild, ViewContaine
 import { Overlay } from 'angular2-modal';
 import { Modal } from 'angular2-modal/plugins/bootstrap';
 
-import { ConferenceAm1, ConferencePm1, ConferencePm2 } from './consts/conference';
+import { ConferenceKeynote, ConferenceAm1, ConferencePm1, ConferencePm2 } from './consts/conference';
 import { Conference, Presenter } from './models';
 
 interface IConference {
@@ -21,6 +21,7 @@ interface IConference {
 export class AppComponent implements AfterViewInit {
   @ViewChild('tableContainer') tableContainer: ElementRef
 
+  conferenceKeynote: Conference;
   conferenceAm1: Conference[];
   conferencePm1: Conference[];
   conferencePm2: Conference[];
@@ -33,6 +34,7 @@ export class AppComponent implements AfterViewInit {
   ) {
     overlay.defaultViewContainer = viewContainerRef;
     
+    this.conferenceKeynote = ConferenceKeynote;
     this.conferenceAm1 = ConferenceAm1;
     this.conferencePm1 = ConferencePm1;
     this.conferencePm2 = ConferencePm2;
