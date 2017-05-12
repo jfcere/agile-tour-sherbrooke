@@ -3,6 +3,7 @@ import { Overlay } from 'angular2-modal';
 import { Modal } from 'angular2-modal/plugins/bootstrap';
 
 import { ConferenceKeynote, ConferenceAm1, ConferencePm1, ConferencePm2 } from './consts/conference';
+import { Room } from './consts/room';
 import { Conference, Presenter } from './models';
 
 interface IConference {
@@ -25,6 +26,7 @@ export class AppComponent implements AfterViewInit {
   conferenceAm1: Conference[];
   conferencePm1: Conference[];
   conferencePm2: Conference[];
+  room: any;
 
   constructor(
     overlay: Overlay,
@@ -38,6 +40,7 @@ export class AppComponent implements AfterViewInit {
     this.conferenceAm1 = ConferenceAm1;
     this.conferencePm1 = ConferencePm1;
     this.conferencePm2 = ConferencePm2;
+    this.room = Room;
   }
 
   ngAfterViewInit() {

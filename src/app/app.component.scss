@@ -230,6 +230,11 @@ main {
         vertical-align: middle;
       }
 
+      th {
+        padding-bottom: 12px;
+        padding-top: 12px;
+      }
+
       th:first-child {
         background: transparent;
       }
@@ -239,13 +244,6 @@ main {
         background: rgba(41, 67, 80, 0.54);
         color: #fff;
         font-weight: bold;
-      }
-
-      th {
-        hr {
-          border-top: 2px solid #fff;
-          margin: 8px -8px;
-        }
       }
 
       td:not(:first-child) {
