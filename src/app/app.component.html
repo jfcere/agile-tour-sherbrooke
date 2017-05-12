@@ -87,9 +87,9 @@
                   <tr>
                     <td>{{ conferenceKeynote.time }}</td>
                     <td class="keynote clickable" colspan="4" (click)="openModal(conferenceKeynote)">
-                      <div class="title">Agility and Architecture</div>
-                      <div class="presenter">Uncle Bob Martin</div>
-                      <div class="company">Keynote</div>
+                      <div class="title">{{ conferenceKeynote.title }}</div>
+                      <div class="presenter">{{ concatPresenters(conferenceKeynote.presenters) }}</div>
+                      <div class="company">{{ conferenceKeynote.company }}</div>
                     </td>
                   </tr>
                   <tr>
