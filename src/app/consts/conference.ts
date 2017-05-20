@@ -219,7 +219,7 @@ export const ConferencePm2: Conference[] = [
     room: Room.room4,
     title: `CI & CD: Intégration Continue et Livraison Continue, de la théorie à la pratique`,
     resume: `Dans mon expérience, j'ai étudié les principes de l'intégration continue (CI) et de la livraison continue (CD). J'ai eu la chance de pouvoir appliquer ces principes dans un monde réel et aujourd'hui il est possible de constater les bienfaits. Dans cette présentation, je démontre le fruit de ces efforts et comment nous y sommes arrivés.`,
-    company: `SherWeb`,
+    company: `Nmédia`,
     presenters: [
       {
         name: `Gabriel Blais-Bourget`,
